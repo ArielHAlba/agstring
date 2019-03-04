@@ -547,6 +547,8 @@ func TestConcat(t *testing.T) {
 	}{
 		{[][]string{{"slice1", "slice2"}, {"slice3", "slice4"}},
 			[]string{"slice1", "slice2", "slice3", "slice4"}},
+		{[][]string{{"slice1", "slice2"}, {"slice3", "slice4"}, {"slice5", "slice6"}},
+			[]string{"slice1", "slice2", "slice3", "slice4", "slice5", "slice6"}},
 	}
 
 	for _, tt := range testCasesForSlices {

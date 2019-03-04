@@ -565,7 +565,6 @@ func TestConcat(t *testing.T) {
 
 	for _, tt := range testCasesWithASliceUpdate {
 		result := Concat(tt.input...)
-		require.Equal(t, tt.expected, result)
 		sliceToUpdate[0] = "abc"
 		require.Equal(t, tt.expected, result)
 		sliceToUpdate = []string{"slice6", "slice7"}

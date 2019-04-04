@@ -168,7 +168,7 @@ func TestContainsSlice(t *testing.T) {
 	}
 
 	for _, tt := range trueTestCases {
-		require.True(t, ContainsSlice(tt.slice, tt.s, tt.transform...))
+		require.True(t, SliceContains(tt.slice, tt.s, tt.transform...))
 	}
 
 	falseTestCases := []struct {
@@ -194,6 +194,6 @@ func TestContainsSlice(t *testing.T) {
 	}
 
 	for _, tt := range falseTestCases {
-		require.False(t, ContainsSlice(tt.slice, tt.s, tt.transform...))
+		require.False(t, SliceContains(tt.slice, tt.s, tt.transform...))
 	}
 }

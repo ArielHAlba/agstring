@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TrimSpace trims spaces and removes ZeroWidth chars
+// TrimAndRemoveZeroWidthChars trims spaces and removes ZeroWidth chars
 func TrimAndRemoveZeroWidthChars(s string) string {
 	return strings.TrimSpace(ReplaceZeroWidthChars(s))
 }

@@ -34,8 +34,10 @@ func ReplaceAll(source string, toBeReplaced string, replacements ...string) stri
 // zero-width space:'\u200B', zero-width no break: '\uFEFF', zero-width joiner: '\u200D'
 // and zero-width non-joiner: '\u200C' replaced by blank character
 func ReplaceZeroWidthChars(s string) string {
-	return ReplaceAll(s, "", string(ZeroWidthSpace),
-		string(ZeroWidthSpaceNoBreakSpace), string(ZeroWidthJoiner),
+	return ReplaceAll(s, "",
+		string(ZeroWidthSpace),
+		string(ZeroWidthSpaceNoBreakSpace),
+		string(ZeroWidthJoiner),
 		string(ZeroWidthNonJoiner))
 }
 
